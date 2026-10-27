@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equilibria on Google Play</title>
+<meta name="description" content="Equilibria: Balance Puzzle. Hang weights on scales and balance them all. Free on Google Play.">
+<meta property="og:title" content="Equilibria: Balance Puzzle">
+<meta property="og:description" content="Hang weights on scales and balance them all. Free on Google Play.">
+<meta property="og:url" content="https://levelwisegames.github.io/play">
+<link rel="canonical" href="https://play.google.com/store/apps/details?id=com.LevelwiseGames.Equilibria">
+<script>
+  // Send visitors straight to the Play Store.
+  // On Android, an intent:// link opens the Play Store app directly. That gets out of
+  // Instagram/Facebook/TikTok in-app browsers, where a plain Play link often fails silently.
+  // If the Play Store app is missing, the intent falls back to the web listing.
+  (function () {
+    var id = "com.LevelwiseGames.Equilibria";
+    var web = "https://play.google.com/store/apps/details?id=" + id;
+    var target = web;
+    if (/android/i.test(navigator.userAgent)) {
+      target = "intent://details?id=" + id +
+        "#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=" +
+        encodeURIComponent(web) + ";end";
+    }
+    window.__playTarget = target;
+    window.location.replace(target);
+  })();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://play.google.com/store/apps/details?id=com.LevelwiseGames.Equilibria"></noscript>
+<style>
+  :root { --bg1:#1f4d3a; --bg2:#0f2a20; --brass:#d9b45a; --brass-dark:#a07a2c; --text:#f4ecd8; --muted:#c9bfa6; }
+  * { box-sizing:border-box; margin:0; }
+  body {
+    min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px 16px; text-align:center;
+    background:radial-gradient(ellipse at 50% 30%, var(--bg1), var(--bg2) 75%); background-color:var(--bg2);
+    color:var(--text); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  main { width:100%; max-width:360px; }
+  h1 { font-family:Georgia,"Times New Roman",serif; color:var(--brass); font-size:30px; }
+  p { color:var(--muted); margin:10px 0 26px; font-size:15px; }
+  .btn {
+    display:block; padding:16px 20px; border-radius:14px; text-decoration:none; font-size:18px; font-weight:700;
+    color:#1b1407; background:linear-gradient(180deg,#ecd08a,var(--brass) 55%,var(--brass-dark));
+    box-shadow:0 4px 0 #6e521b,0 8px 18px rgba(0,0,0,.35);
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Equilibria</h1>
+  <p>Opening Google Play…</p>
+  <a id="play" class="btn" href="https://play.google.com/store/apps/details?id=com.LevelwiseGames.Equilibria">Tap here if it doesn't open</a>
+</main>
+<script>
+  if (window.__playTarget) document.getElementById("play").href = window.__playTarget;
+</script>
+</body>
+</html>
