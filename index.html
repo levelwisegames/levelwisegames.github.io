@@ -161,7 +161,7 @@ section .lead{color:var(--muted);margin:0 0 22px}
     document.querySelectorAll(".store-play").forEach(function (a) { a.href = intent("market", "com.android.vending", play); });
     document.querySelectorAll(".store-ag").forEach(function (a) { a.href = intent("appmarket", "com.huawei.appmarket", ag); });
   }
-  if (/huawei|honor|harmonyos|hmscore/i.test(ua)) document.documentElement.classList.add("is-huawei");
+  if (/huawei|harmonyos|hmscore/i.test(ua)) document.documentElement.classList.add("is-huawei");
 })();
 </script>
 </body></html>
